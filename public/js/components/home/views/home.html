@@ -1,0 +1,51 @@
+<form name="form">
+<div class="row">
+    <div class="col-sm-offset-1 col-sm-10 col-md-offset-3 col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">Grid F1</div>
+            <div class="panel-body">
+
+                <div class="alert alert-danger" ng-show="form.username.$dirty && form.username.$invalid">You must provide a valid username (>5 chars)</div>
+                <div class="form-group">
+                    <input type="text" name="username" class="form-control" ng-model="username" pattern="[A-Za-z][A-Za-z0-9]*"  ng-minlength="5"
+                        placeholder="your usename" />
+                        
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="displayName" class="form-control" ng-model="displayName" placeholder="your display name" />
+                </div>
+                <h4> Choose your circuit  </h4>
+                <div class="form-group">
+
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ circuit.name }}
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:;" ng-click="selectCircuit(c)" ng-repeat="c in circuits">{{ c.name }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4> ... or ... </h4>
+
+                <div class="form-group">
+                    <input type="text" ng-model="game" class="form-control" placeholder="type in the game id you wish to join" />
+                </div>
+
+
+            </div>
+            <div class="panel-footer">
+                <div class="form-group clearfix">
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-default" ng-click="create()">Create</button>
+                        <button class="btn btn-default" ng-click="join()">Join</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>

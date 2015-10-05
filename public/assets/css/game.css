@@ -1,0 +1,21 @@
+/* DOT LAYER */
+.dot {
+	/* stroke: #ececec; */
+	stroke-width: 0.1;
+	/* fill: #ccc; */
+	stroke: none;
+	fill: none;
+
+}
+
+/* PLAYER MOVEMENTS LAYER */
+
+.move {
+    opacity: 0.6;
+	cursor: pointer;
+}
+
+/* BACKGROUND LAYER */
+.background {
+	fill: #efefef;
+}

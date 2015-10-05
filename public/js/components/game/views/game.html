@@ -1,0 +1,62 @@
+<div class="full-width">
+    <div id="viewport" class="viewport">
+        <cc-board circuit="circuit" players="players" player="currentPlayer" onturn="makeMove">
+            <cc-path ng-repeat="player in players" player="player"></cc-path>
+        </cc-board>
+    </div>
+
+    <div id="info-panel">
+        <div class="panel panel-default box-shadow">
+            <div class="panel-heading">
+                <h3 class="panel-title" id="player-name">{{ currentPlayer.name }}</h3>
+                
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>{{ currentPlayer.id }}</th>
+                        <th>x</th>
+                        <th>y</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Speed</td>
+                        <td>{{ currentPlayer.spd.x }}</td>
+                        <td>{{ currentPlayer.spd.y }}</td>
+                    </tr>
+                    <tr>
+                        <td>Ellapsed time</td>
+                        <td><span>{{ currentPlayer.moves.length/10.0 }}</span> s</td>
+
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <div class="panel-footer">
+                <div class="text-right">
+                <a class="btn btn-default" href="#/invite/{{ game.id }}" target="_blank">
+                    <i class="glyphicon glyphicon-share"></i> Share
+                </a>
+                <button class="btn btn-default" ng-disabled="!(isReady && !isStarted && player.isAdmin )" ng-click="start()">
+                    <i class="glyphicon glyphicon-play"></i>
+                    Start
+                </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default box-shadow">
+            <div class="panel-heading">Players</div>
+            <table class="table">
+                <tr ng-repeat="player in players">
+                    <td><span style="color: {{ player.color }}; font-weight: 600;">{{ player.id }}</span></td>
+                    <td>
+                        <i class="glyphicon glyphicon-circle-arrow-right" ng-show="player.id == turn.id"></i>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+{
+    "width": 300,
+    "height": 200,
+    "start": [
+        { "x": 53, "y": 126 },
+        { "x": 54, "y": 126 },
+        { "x": 53, "y": 127 },
+        { "x": 54, "y": 127 }
+        ],
+    "useBackground": false,
+    "useGrid": false
+}
