@@ -1,0 +1,35 @@
+{
+  "name": "gridf1",
+  "version": "1.0.0",
+  "description": "Grid F1 Game Application",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "morgan": "^1.6.1",
+    "socket.io": "^1.3.7",
+    "node-uuid": "^1.4.3",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dalotodo/gridf1.git"
+  },
+  "keywords": [
+    "node",
+    "javascript",
+    "gridf1",
+    "angular"
+  ],
+  "author": "Pablo Perez",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/dalotodo/gridf1/issues"
+  },
+  "homepage": "https://github.com/dalotodo/gridf1"
+}
